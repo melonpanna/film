@@ -8,6 +8,9 @@ body{
     background-color: black;
     color: #f3f3f3;
 }
+#content>div:nth-child(n+3){
+    padding-top:60px;
+}
 #header{
     margin:0px;
     padding-left:100px;
@@ -40,6 +43,10 @@ body{
     width:120px;
     padding-bottom:10px;
     text-align: center;
+}
+#menu a{
+    color:white;
+    text-decoration: none;
 }
 #top button{
     padding-left:8px;
