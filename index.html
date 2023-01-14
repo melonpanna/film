@@ -26,10 +26,10 @@
         <button>준비물 구매</button>
       </div>
       <div id="menu">
-        <nav style="border-bottom: 2px solid white">클래스 소개</nav>
-        <nav>필름 선택</nav>
-        <nav>스캐너 선택</nav>
-        <nav>작가 사진 보기</nav>
+        <div onclick="select(1)" style="border-bottom: 2px solid white">클래스 소개</div>
+        <div onclick="select(2)">필름 선택</div>
+        <div onclick="select(3)">스캐너 선택</div>
+        <div onclick="select(4)">작가 사진 보기</div>
       </div>
       <div id="introduction">
         <h1>클래스 소개</h1>
@@ -122,7 +122,22 @@
         <div class="container">
           <img src="src/xtra1.jpg" alt="" /><img src="src/burnt.jpg" alt="" />
         </div>
+        <div class="container">
+          <img src="src/yeosu.jfif" alt="" />
+        </div>
       </div>
     </div>
+    <script>
+      function select(index){
+        let arr=document.querySelectorAll('#menu *');
+        console.log(arr);
+        for(var i=0;i<arr.length;i++){
+          console.log(arr.item(i));
+          arr.item(i).style.borderBottom="";
+        }
+        //cf)<ol><li> 에서 li:nth-child(n)임! ol:nth-child(n)이 아니라!!
+        document.querySelector(`#menu>div:nth-child(${index})`).style.borderBottom='2px solid white';
+      }
+    </script>
   </body>
 </html>
